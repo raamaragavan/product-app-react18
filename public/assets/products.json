@@ -1,0 +1,71 @@
+[
+    {
+      "title": "Product 1",
+      "id": "ec1041",
+      "color": "White",
+      "price": 5400,
+      "availability": "Available"
+    },
+    {
+    "title": "Product 2",
+      "id": "ec1042",
+      "color": "White",
+      "price": 8700,
+      "availability": "Out of stock"
+    },
+    {
+    "title": "Product 3",
+      "id": "ec1043",
+      "color": "Brown",
+      "price": 3490,
+      "availability": "Available"
+    },
+    {
+        "title": "Product 4",
+      "id": "ec1044",
+      "color": "Rose Gold",
+      "price": 15000,
+      "availability": "Available"
+    },
+    {
+        "title": "Product 5",
+      "id": "ec1045",
+      "color": "Tan Brown",
+      "price": 9900,
+      "availability": "Out of stock"
+    },{
+        "title": "Product 6",
+      "id": "ec1046",
+      "color": "Rose",
+      "price": 17500,
+      "availability": "Available"
+    },
+    {
+        "title": "Product 7",
+      "id": "ec1047",
+      "color": "Tan Brown",
+      "price": 25690,
+      "availability": "Out of stock"
+    },
+    {
+        "title": "Product 8",
+      "id": "ec1048",
+      "color": "Gold",
+      "price": 7600,
+      "availability": "Available"
+    },
+    {
+        "title": "Product 9",
+      "id": "ec1049",
+      "color": "orange",
+      "price": 9950,
+      "availability": "Out of stock"
+    },
+    {
+        "title": "Product 10",
+      "id": "ec1050",
+      "color": "blue",
+      "price": 2000,
+      "availability": "Available"
+    }
+  ]

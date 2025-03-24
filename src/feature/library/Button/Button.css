@@ -1,0 +1,17 @@
+.button {
+    color: white;
+    font-weight: bold;
+    background-color: darkolivegreen;
+    border: none;
+    padding: .8em 1em;
+    border-radius: .2rem;
+    cursor: pointer;
+  }
+
+  .cancel-btn{
+    background-color: darkgray;
+  }
+
+  .action-btn{
+    background-color: darkblue;
+  }
