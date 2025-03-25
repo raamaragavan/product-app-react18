@@ -1,9 +1,20 @@
-.product-search-wrapper{
+.product-filter-wrapper{
     width:100%;
-    /* height:32px; */
+    height:100% !important;
     overflow:hidden;
 }
 
-.product-search-wrapper .MuiInputBase-root{
+.product-filter-wrapper .MuiInputBase-root{
     height: 36px;
 }
+
+.filter-inner-wrapper{
+    height: calc(100% - 140px) !important;
+    overflow-y: auto;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 18px;
+    color: darkolivegreen;
+  }

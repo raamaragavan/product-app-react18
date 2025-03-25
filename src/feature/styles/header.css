@@ -17,6 +17,14 @@
     padding: 0px 10px;
 }
 
+.center-right-flex > Button {
+    margin-right: 1.5em;
+  }
+
+  .center-right-flex > .icon-shopping{
+    margin-right: 1.5em;
+}
+
 .center-left-flex{
     display: flex;
     justify-content: flex-start;
@@ -65,6 +73,13 @@ padding:0px 10px;
 .center-left-flex a{
     color:darkolivegreen;
     font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.center-right-flex a{
+    color:darkolivegreen;
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
 }

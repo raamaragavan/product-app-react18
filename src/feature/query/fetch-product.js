@@ -14,6 +14,7 @@ const fetchProducts = async (limit) => {
 export const useProducts = (limit) => useQuery({
     queryKey: ['products', limit],
     queryFn: () => fetchProducts(limit),
+    staleTime: Infinity,
     refetchOnWindowFocus: false,
     placeholderData: keepPreviousData,
   })

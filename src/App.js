@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './feature/components/header';
-import Products from './feature/components/product';
+import Home from './feature/components/home';
 import ProductDetails from './feature/components/product-details';
 import Footer from './feature/components/footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Products />} />
+          <Route path="/" element={<Home />} />
           <Route path="/details/:productId" element={<ProductDetails />} />
         </Routes>
       </Router>

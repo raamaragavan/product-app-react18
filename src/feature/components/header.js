@@ -3,14 +3,17 @@ import React, { useState } from 'react';
 import '../styles/header.css';
 import Button from '../library/Button';
 import MDialog from '../library/Mdialog';
-import ProductSearch from './product-search';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import TextField from '@mui/material/TextField';
+import { MdAddShoppingCart } from "react-icons/md";
 import { Link } from 'react-router';
+import { useSelector } from 'react-redux';
+import Badge from '@mui/material/Badge';
 
 
 function Header() {
+  const cartItems = useSelector((state) => state.cart.items);
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState(null);
   const [emailError, setEmailError] = useState(false);
@@ -94,16 +97,22 @@ function Header() {
         <Grid container spacing={2}>
           <Grid size={{ xs: 2, md: 2 }}>
             <div className="center-left-flex plr-10">
-              <Link to={`/`}> Product App</Link>
+              <Link to={`/`}> Shopify</Link>
             </div>
           </Grid>
           <Grid size={{ xs: 6, md: 8 }}>
             <div className="center-flex">
-              <ProductSearch />
+
             </div>
           </Grid>
           <Grid size={{ xs: 2, md: 2 }}>
-            <div className="center-right-flex plr-10">
+            <div className="center-right-flex">
+              <Link to={`/`} className="icon-shopping">
+                <Badge badgeContent={cartItems.length} color="success">
+                  <MdAddShoppingCart size={30} />
+                </Badge>
+
+              </Link>
               <Button {...props} onClick={handleSubscribeDialogOpen} id="subscribe-btn">Subscribe</Button>
             </div>
           </Grid>
