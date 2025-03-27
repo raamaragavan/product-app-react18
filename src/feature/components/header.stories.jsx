@@ -1,15 +1,20 @@
 import Header from './header';
 import { userEvent, within,expect } from '@storybook/test';
 import { MemoryRouter, Routes, Route} from "react-router";
+import store from '../../store';
+import { Provider } from 'react-redux';
 
 export default {
   component: Header,
   decorators: [(Story) => (
+    <Provider store={store}>
       <MemoryRouter initialEntries={["/"]}>
          <Routes>
            <Route path="/" element={<Story />}/>
          </Routes>
-      </MemoryRouter>)],
+      </MemoryRouter>
+      </Provider>
+      )],
 }
 
 export const Default = () => <Header />;

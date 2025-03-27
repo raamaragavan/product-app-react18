@@ -11,7 +11,6 @@ import { Link } from 'react-router';
 import { useSelector } from 'react-redux';
 import Badge from '@mui/material/Badge';
 
-
 function Header() {
   const cartItems = useSelector((state) => state.cart.items);
   const [open, setOpen] = useState(false);
@@ -107,7 +106,7 @@ function Header() {
           </Grid>
           <Grid size={{ xs: 2, md: 2 }}>
             <div className="center-right-flex">
-              <Link to={`/`} className="icon-shopping">
+              <Link to={`/cartlist`} className="icon-shopping">
                 <Badge badgeContent={cartItems.length} color="success">
                   <MdAddShoppingCart size={30} />
                 </Badge>

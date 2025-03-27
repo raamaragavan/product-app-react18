@@ -22,8 +22,9 @@ function ProductItems() {
     const [selectedProduct, setSelectedProduct] = useState([]);
     const infiniteScroll = () => {
         const productContainer = document.getElementById('products-container');
+        console.log('selectedProduct', selectedProduct, productContainer.offsetHeight + productContainer.scrollTop + 10, productContainer.scrollHeight);
         // End of the document reached?
-        if (productContainer.offsetHeight + productContainer.scrollTop >= productContainer.scrollHeight && (!selectedProduct.length)) {
+        if (productContainer.offsetHeight + productContainer.scrollTop + 10 >= productContainer.scrollHeight && (!selectedProduct.length)) {
             const totalProducts = data.total;
             if (limit <= totalProducts + limitRange) {
                 setLimit((old) => old + limitRange);
@@ -33,8 +34,6 @@ function ProductItems() {
             }
         }
     }
-
-
     const { data, status, error, isFetching } = useProducts(limit);
     const [products, setProducts] = useState([]);
 
@@ -118,9 +117,6 @@ function ProductItems() {
                                 ) : (
                                     <Button {...addActionProps} onClick={() => handleAddToCart(product)}>Add to cart</Button>
                                 )}
-
-
-
                             </div>
                             <div>
                                 <p>Rating: {product.rating} / {maxRating}</p>
